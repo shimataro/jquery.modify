@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>jQuery.modify</title>
+	</head>
+	<body>
+		<h1>jQuery.modify</h1>
+		<form action="#">
+			<div>
+				<input type="text" name="text" autofocus="autofocus" value="jQuery modify test" />
+			</div>
+			<div>
+				<input type="password" name="password" value="jQuery modify test" />
+			</div>
+			<div>
+				<textarea name="textarea">jQuery modify test</textarea>
+			</div>
+			<div>
+				<select name="select">
+					<option value="jQuery">jQuery</option>
+					<option value="modify">modify</option>
+					<option value="test">test</option>
+				</select>
+			</div>
+		</form>
+
+		<!-- log area -->
+		<div id="log"></div>
+
+		<script src="https://code.jquery.com/jquery-1.7.0.min.js"></script>
+
+		<!-- That's it! Now you can trap "modify" event! -->
+		<script src="./jquery.modify.min.js"></script>
+		<script>
+(function($, window, undefined)
+{
+	$(function($)
+	{
+		$(window.document).on("modify", ":input", function(event, data)
+		{
+			// Look!
+			var message = $(this).attr("name") + ": " + data.previousValue + " -> " + data.currentValue;
+			$("<div />").text(message).prependTo($("#log"));
+		});
+	});
+})(jQuery, window);
+		</script>
+	</body>
+</html>
