@@ -5,6 +5,7 @@
  */
 (function($, window, undefined)
 {
+	"use strict";
 	var
 		eventName   = "modify",
 		interval_ms = 200;
@@ -33,7 +34,7 @@
 			var timer_id = window.setInterval(function()
 			{
 				var val = $input.val();
-				if(val_saved !== val)
+				if(_isModified(val, val_saved))
 				{
 					// fire event if modified
 					var data = {
@@ -51,6 +52,20 @@
 				window.clearInterval(timer_id);
 				timer_id = null;
 			});
+		}
+
+		function _isModified(val1, val2)
+		{
+			// for long text
+			if(val1.length !== val2.length)
+			{
+				return true;
+			}
+			if(val1 !== val2)
+			{
+				return true;
+			}
+			return false;
 		}
 	});
 })(jQuery, window);
