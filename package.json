@@ -1,6 +1,6 @@
 {
   "name": "jquery.modify",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": " jQuery plugin that fires event immediately when input element is modified.",
   "main": "jquery.modify.min.js",
   "scripts": {
