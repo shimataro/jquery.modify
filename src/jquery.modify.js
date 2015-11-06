@@ -3,6 +3,17 @@
  * Fires "modify" event when input element is modified.
  * Note: doesn't work in checkbox and radio.
  */
+(function(factory)
+{
+	if(typeof module === "object" && typeof module.exports === "object")
+	{
+		module.exports = factory(require("jquery"), window);
+	}
+	else
+	{
+		factory(jQuery, window);
+	}
+}
 (function($, window, undefined)
 {
 	"use strict";
@@ -68,4 +79,4 @@
 			return false;
 		}
 	});
-})(jQuery, window);
+}));

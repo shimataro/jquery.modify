@@ -1,0 +1,30 @@
+{
+  "name": "jquery.modify",
+  "version": "1.1.0",
+  "description": " jQuery plugin that fires event immediately when input element is modified.",
+  "main": "jquery.modify.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shimataro/jquery.modify.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "event"
+  ],
+  "author": "shimataro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shimataro/jquery.modify/issues"
+  },
+  "dependencies": {
+    "jquery": ">=1.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2"
+  }
+}
