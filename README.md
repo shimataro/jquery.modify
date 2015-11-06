@@ -30,6 +30,10 @@ Just load script files and "modify" event will be ready.
 
 Here is [a demo page](https://rawgit.com/shimataro/jquery.modify/master/demo.html).
 
+In addition, you can install via [npm](http://npmjs.com/)!
+
+    $ npm install jquery.modify
+
 ## Project Page
 
 http://github.com/shimataro/jquery.modify
