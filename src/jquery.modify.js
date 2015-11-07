@@ -79,4 +79,5 @@
 			return false;
 		}
 	});
+	return $;
 }));
