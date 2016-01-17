@@ -20,6 +20,9 @@ Almost all browsers that works jQuery.
 ## How to use
 
 Very easy to use!
+
+### Traditional method
+
 Just load script files and "modify" event will be ready.
 
 ```html
@@ -30,9 +33,20 @@ Just load script files and "modify" event will be ready.
 
 Here is [a demo page](https://rawgit.com/shimataro/jquery.modify/master/demo.html).
 
-In addition, you can install via [npm](http://npmjs.com/)!
+### Modern method (CommonJS)
 
-    $ npm install jquery.modify
+If you are using CommonJS-based framework (webpack, browserify, ...), you can describe very simple.
+
+First, install package via [npm](http://npmjs.com/).
+
+    $ npm install --save jquery.modify
+
+...and just do this!
+```js
+// That's it! Now you can trap "modify" event!
+// (and this returns jQuery object)
+var $ = require("jquery.modify");
+```
 
 ## Project Page
 
