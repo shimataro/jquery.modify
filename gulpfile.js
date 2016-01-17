@@ -2,10 +2,14 @@ var gulp = require("gulp");
 
 
 // default task
-gulp.task("default", ["js"], function()
+gulp.task("default", ["build"], function()
 {
 });
 
+
+gulp.task("build", ["js"], function()
+{
+});
 
 // minify JS
 gulp.task("js", function()
